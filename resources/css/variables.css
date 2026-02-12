@@ -16,11 +16,11 @@
         --pale-green: #afd18a;
         --gold: #dad49c;
         /* Site main colours */
-        --primary-colour: var(--sea-green);
-        --text-primary: var(--white);
-        --secondary-colour: var(--gold);
-        --text-secondary: var(--black);
-        --tertiary-colour: var(--dull-green);
+        --primary-colour: #e8e3dd;
+        --text-primary: var(--black);
+        --secondary-colour: #3e3a36;
+        --text-secondary: var(--white);
+        --tertiary-colour: #b46a4e;
         --text-tertiary: var(--white);
         /* Text Colours */
         --in-stock: green;
@@ -185,7 +185,7 @@
                         @media (hover: hover) {
                             &:hover {
                                 background-color: var(--primary-colour);
-                                color: var(--white);
+                                color: var(--black);
                             }
                         }
                     }
@@ -485,3 +485,121 @@
     }
 }
 
+
+
+/* styling */
+#app {
+    .hero_image {
+        .content {
+            .item {
+                .text-section {
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+    .cookie-banner {
+        background-color: var(--secondary-colour) !important;
+        .buttons {
+            button {
+                background-color: var(--tertiary-colour) !important;
+                @media (hover: hover) {
+                    &:hover {
+                        background-color: var(--primary-colour) !important;
+                    }
+                }
+            }
+        }
+    }
+    a:hover {
+        color: var(--secondary-colour) !important;
+    }
+    .widget-header {
+        .widget-subtitle {
+            color: var(--secondary-colour);
+        }
+    }
+    .core-widget.image.image_spacer {
+        .content {
+            .item {
+                div.text-section {
+                    a.btn-read-more {
+                        p {
+                            border-color: var(--primary-colour);
+                            background-color: var(--primary-colour);
+                            color: var(--secondary-colour);
+                        }
+                        &::after {
+                            background-color: var(--secondary-colour);
+                            color: var(--white);
+
+                        }
+                        @media screen and (min-width: 40em) {
+                            &::after {
+                                content: 'Make Appointment';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        .footer-top {
+            color: var(--white);
+            display: flex;
+            @media screen and (min-width: 40em) {
+                flex-direction: row;
+                gap: 20px;
+                .social-links {
+                    align-items: flex-end;
+                    a {
+                        display: flex;
+                    }
+                }
+            }
+            .right-upper {
+                margin-top: auto;
+            }
+            .social-links {
+                margin-left: auto;
+                width: fit-content;
+                a svg {
+                    transition: all 0.2s;
+                }
+            }
+            @media (hover:hover) {
+                a:hover {
+                    color: var(--white) !important;
+                }
+                .social-links a:hover {
+                    svg {
+                        color: var(--tertiary-colour);
+                        background-color: var(--white);
+                        border-radius: 100px;
+                    }
+                }
+            }
+        }
+    }
+    .front-page-wrapper {
+        .header-wrapper {
+            .nav.nav-open {
+                background-color: var(--secondary-colour);
+                .toggle-yes {
+                    background-color: var(--white);
+                }
+            }
+        }
+    }
+    .hamburger-nav {
+        .hamburger-inner {
+            background-color: var(--secondary-colour);
+            ul {
+                li {
+                    background-color: var(--primary-colour);
+                }
+            }
+        }
+    }
+}
